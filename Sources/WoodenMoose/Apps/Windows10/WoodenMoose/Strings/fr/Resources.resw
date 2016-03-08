@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ApplicationUserControl_Reviews.Text" xml:space="preserve">
+    <value>commentaires</value>
+  </data>
+  <data name="ApplicationUserControl_UnreadReviews.Text" xml:space="preserve">
+    <value>non lus</value>
+  </data>
+  <data name="DetailView_Reviews.Header" xml:space="preserve">
+    <value>Commentaires</value>
+  </data>
+  <data name="DetailView_Summary.Header" xml:space="preserve">
+    <value>Résumé</value>
+  </data>
+  <data name="MarketUserControl_UnreadReviews.Text" xml:space="preserve">
+    <value>non lus</value>
+  </data>
+  <data name="MarketUserControl_Reviews.Text" xml:space="preserve">
+    <value>commentaires</value>
+  </data>
+  <data name="SummaryView_Acquisitions.Text" xml:space="preserve">
+    <value>Téléchargements</value>
+  </data>
+  <data name="SummaryView_Distribution.Text" xml:space="preserve">
+    <value>Répartition</value>
+  </data>
+  <data name="SummaryView_Ratings.Text" xml:space="preserve">
+    <value>Évaluations</value>
+  </data>
+  <data name="SummaryView_Reviews.Text" xml:space="preserve">
+    <value>Commentaires</value>
+  </data>
+  <data name="SummaryView_NewAcquisitions.Text" xml:space="preserve">
+    <value>{0:n0} nouveaux</value>
+  </data>
+  <data name="SummaryView_NewRatings.Text" xml:space="preserve">
+    <value>{0:n0} nouvelles</value>
+  </data>
+  <data name="SummaryView_NewReviews.Text" xml:space="preserve">
+    <value>{0:n0} nouveaux</value>
+  </data>
+  <data name="SummaryView_AverageRating.Text" xml:space="preserve">
+    <value>Note moyenne</value>
+  </data>
+  <data name="SummaryView_AverageRatingValue.Text" xml:space="preserve">
+    <value>{0:n1} / 5</value>
+  </data>
+</root>

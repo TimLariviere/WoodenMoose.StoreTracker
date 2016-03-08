@@ -1,0 +1,138 @@
+﻿<UserControl x:Class="WoodenMoose.Views.PartialViews.SummaryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="using:WoodenMoose.Controls"
+             mc:Ignorable="d">
+
+    <UserControl.Resources>        
+        <Style x:Key="StatTitleTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
+            <Setter Property="Grid.Row" Value="0" />
+        </Style>
+
+        <Style x:Key="StatValueViewboxStyle" TargetType="Viewbox">
+            <Setter Property="Grid.Row" Value="1" />
+        </Style>
+
+        <Style x:Key="StatValueTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+        </Style>
+
+        <Style x:Key="StatNewTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource CaptionTextBlockStyle}">
+            <Setter Property="Grid.Row" Value="2" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+        </Style>
+    </UserControl.Resources>
+
+    <RelativePanel Margin="20,10,20,0">
+        
+        <!-- Average rating -->
+        <Grid x:Name="AverageRating"
+              RelativePanel.AlignLeftWithPanel="True"
+              RelativePanel.AlignTopWithPanel="True"
+              RelativePanel.AlignRightWithPanel="True"
+              Height="100"
+              HorizontalAlignment="Left">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+
+            <TextBlock x:Uid="SummaryView_AverageRating" Style="{StaticResource BaseTextBlockStyle}" />
+            <Viewbox Grid.Row="1">
+                <TextBlock Text="{x:Bind ViewModel.AverageRating, Mode=OneWay, Converter={StaticResource StringFormatConverter}, ConverterParameter='Resources\\\\SummaryView_AverageRatingValue/Text'}" />
+            </Viewbox>
+            <controls:Ratings Grid.Row="2" Margin="0,10,0,0" Height="20" Value="{x:Bind ViewModel.AverageRating, Mode=OneWay}" />
+        </Grid>
+
+        <!-- Distribution -->
+        <Grid x:Name="DistributionGraph"
+              RelativePanel.Below="AverageRating"
+              RelativePanel.AlignLeftWithPanel="True"
+              RelativePanel.AlignRightWithPanel="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Uid="SummaryView_Distribution"
+                       Grid.Row="0"
+                       Style="{StaticResource BaseTextBlockStyle}"
+                       Margin="0,20,0,0" />
+
+            <controls:RatingDistributionGraph Grid.Row="1" Height="150" Margin="0,10"
+                                              Star5Count="{x:Bind ViewModel.Star5Count, Mode=OneWay}"
+                                              Star4Count="{x:Bind ViewModel.Star4Count, Mode=OneWay}"
+                                              Star3Count="{x:Bind ViewModel.Star3Count, Mode=OneWay}"
+                                              Star2Count="{x:Bind ViewModel.Star2Count, Mode=OneWay}"
+                                              Star1Count="{x:Bind ViewModel.Star1Count, Mode=OneWay}"
+                                              TotalStarCount="{x:Bind ViewModel.RatingsCount, Mode=OneWay}" />
+        </Grid>
+        
+        <Grid x:Name="StatsGrid"
+              RelativePanel.Below="DistributionGraph"
+              RelativePanel.AlignLeftWithPanel="True"
+              RelativePanel.AlignRightWithPanel="True"
+              Height="100">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            
+            <Grid Grid.Column="0"
+                  Margin="0,10,10,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <TextBlock x:Uid="SummaryView_Ratings" Style="{StaticResource StatTitleTextBlockStyle}" />
+                <Viewbox Style="{StaticResource StatValueViewboxStyle}">
+                    <TextBlock Style="{StaticResource StatValueTextBlockStyle}"
+                               Text="{x:Bind ViewModel.RatingsCount, Mode=OneWay, Converter={StaticResource StringFormatConverter}, ConverterParameter={}{0:n0}}" />
+                </Viewbox>
+                <TextBlock Style="{StaticResource StatNewTextBlockStyle}"
+                           Text="{x:Bind ViewModel.NewRatingsCount, Mode=OneWay, Converter={StaticResource StringFormatConverter}, ConverterParameter='Resources\\\\SummaryView_NewRatings/Text'}" />
+            </Grid>
+
+            <Grid Grid.Column="1"
+                  Margin="10,10,10,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <TextBlock x:Uid="SummaryView_Reviews" Style="{StaticResource StatTitleTextBlockStyle}" />
+                <Viewbox Style="{StaticResource StatValueViewboxStyle}">
+                    <TextBlock HorizontalAlignment="Center" Text="{x:Bind ViewModel.ReviewsCount, Mode=OneWay, Converter={StaticResource StringFormatConverter}, ConverterParameter={}{0:n0}}" />
+                </Viewbox>
+                <TextBlock Grid.Row="2" Style="{StaticResource CaptionTextBlockStyle}" HorizontalAlignment="Center" Text="{x:Bind ViewModel.NewReviewsCount, Mode=OneWay, Converter={StaticResource StringFormatConverter}, ConverterParameter='Resources\\\\SummaryView_NewReviews/Text'}" />
+            </Grid>
+
+            <Grid Grid.Column="2"
+                  Margin="10,10,0,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <TextBlock x:Uid="SummaryView_Acquisitions" Style="{StaticResource StatTitleTextBlockStyle}" />
+                <Viewbox Style="{StaticResource StatValueViewboxStyle}">
+                    <TextBlock Style="{StaticResource StatValueTextBlockStyle}"
+                               Text="{x:Bind ViewModel.AcquisitionsCount, Mode=OneWay, Converter={StaticResource StringFormatConverter}, ConverterParameter={}{0:n0}}" />
+                </Viewbox>
+                <TextBlock Style="{StaticResource StatNewTextBlockStyle}"
+                           Text="{x:Bind ViewModel.NewAcquisitionsCount, Mode=OneWay, Converter={StaticResource StringFormatConverter}, ConverterParameter='Resources\\\\SummaryView_NewAcquisitions/Text'}" />
+            </Grid>
+        </Grid>
+    </RelativePanel>
+</UserControl>

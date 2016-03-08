@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="WoodenMoose.Views.PartialViews.MarketsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:WoodenMoose.Controls.UserControls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:windowsStateTriggers="using:WindowsStateTriggers"
+             mc:Ignorable="d">
+
+    <RelativePanel BorderThickness="0,0,1,0"
+                   BorderBrush="{ThemeResource BorderBrush}">
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="DeviceFamilyStates">
+                <VisualState x:Name="DefaultState" />
+                <VisualState x:Name="Mobile">
+                    <VisualState.StateTriggers>
+                        <windowsStateTriggers:DeviceFamilyStateTrigger DeviceFamily="Mobile" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="CommandBar.Visibility" Value="Visible" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <!-- Actions -->
+        <Border x:Name="ActionsPanel"
+                RelativePanel.AlignLeftWithPanel="True"
+                RelativePanel.AlignTopWithPanel="True"
+                RelativePanel.AlignRightWithPanel="True"
+                Background="{ThemeResource BackgroundBrush1}"
+                BorderBrush="{ThemeResource BorderBrush}"
+                BorderThickness="0,0,0,1">
+            <Grid>
+                <Button BorderThickness="0"
+                        Background="Transparent"
+                        Foreground="{ThemeResource ForegroundBrush2}"
+                        Height="50" Width="50"
+                        HorizontalAlignment="Right">
+                    <SymbolIcon>Find</SymbolIcon>
+                </Button>
+            </Grid>
+        </Border>
+
+        <CommandBar x:Name="CommandBar"
+                    ClosedDisplayMode="Compact"
+                    RelativePanel.AlignLeftWithPanel="True"
+                    RelativePanel.AlignRightWithPanel="True"
+                    RelativePanel.AlignBottomWithPanel="True"
+                    Background="{ThemeResource BackgroundBrush2}"
+                    Visibility="Collapsed">
+            <AppBarButton Icon="Filter" Label="Filter" />
+            <AppBarButton Icon="Sort" Label="Sort" />
+        </CommandBar>
+
+        <ListView x:Name="ListView"
+                  RelativePanel.Below="ActionsPanel"
+                  RelativePanel.Above="CommandBar"
+                  RelativePanel.AlignLeftWithPanel="True"
+                  RelativePanel.AlignRightWithPanel="True"
+                  ItemsSource="{x:Bind ViewModel.Markets}"
+                  ItemClick="OnListViewItemClick"
+                  IsItemClickEnabled="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <local:MarketUserControl Height="80" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <ListViewItemPresenter SelectedBackground="{ThemeResource SelectedBackgroundBrush2}"
+                                                       SelectedForeground="{ThemeResource SelectedForegroundBrush2}"
+                                                       PointerOverBackground="{ThemeResource SelectedBackgroundBrush2}"
+                                                       PointerOverForeground="{ThemeResource SelectedForegroundBrush2}"
+                                                       SelectedPointerOverBackground="{ThemeResource SelectedBackgroundBrush2}"
+                                                       SelectedPressedBackground="{ThemeResource SelectedBackgroundBrush2}"
+                                                       PressedBackground="{ThemeResource SelectedBackgroundBrush2}"
+                                                       HorizontalContentAlignment="Stretch"
+                                                       VerticalContentAlignment="Stretch" />
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+
+    </RelativePanel>
+</UserControl>

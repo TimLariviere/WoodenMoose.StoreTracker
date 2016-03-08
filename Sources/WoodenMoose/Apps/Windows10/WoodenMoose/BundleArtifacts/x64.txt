@@ -1,0 +1,2 @@
+MainPackage=E:\Work\Source codes\.NET Framework\Universal Windows Platform\WoodenMoose\Sources\WoodenMoose\Apps\Windows10\WoodenMoose\bin\x64\Release\WoodenMoose_1.1.0.0_x64.appx
+SymbolPackage=E:\Work\Source codes\.NET Framework\Universal Windows Platform\WoodenMoose\Sources\WoodenMoose\Apps\Windows10\WoodenMoose\AppPackages\WoodenMoose_1.1.0.0_Test\WoodenMoose_1.1.0.0_x64.appxsym

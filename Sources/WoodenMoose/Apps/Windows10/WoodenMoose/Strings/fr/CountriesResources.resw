@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="be" xml:space="preserve">
+    <value>Belgique</value>
+  </data>
+  <data name="ca" xml:space="preserve">
+    <value>Canada</value>
+  </data>
+  <data name="cn" xml:space="preserve">
+    <value>Chine</value>
+  </data>
+  <data name="de" xml:space="preserve">
+    <value>Allemagne</value>
+  </data>
+  <data name="fr" xml:space="preserve">
+    <value>France</value>
+  </data>
+  <data name="gb" xml:space="preserve">
+    <value>Royaume-Uni</value>
+  </data>
+  <data name="it" xml:space="preserve">
+    <value>Italie</value>
+  </data>
+  <data name="jp" xml:space="preserve">
+    <value>Japon</value>
+  </data>
+  <data name="ma" xml:space="preserve">
+    <value>Maroc</value>
+  </data>
+  <data name="us" xml:space="preserve">
+    <value>États-Unis</value>
+  </data>
+  <data name="ww" xml:space="preserve">
+    <value>Mondial</value>
+  </data>
+</root>

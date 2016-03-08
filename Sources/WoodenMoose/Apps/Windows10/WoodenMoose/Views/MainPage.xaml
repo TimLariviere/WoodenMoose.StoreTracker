@@ -1,0 +1,134 @@
+﻿<Page x:Class="WoodenMoose.Views.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:partialViews="using:WoodenMoose.Views.PartialViews"
+      xmlns:windowsStateTriggers="using:WindowsStateTriggers"
+      mc:Ignorable="d"
+      DataContext="{Binding MainPageViewModel, Source={StaticResource ViewModelLocator}}"
+      Background="{ThemeResource BackgroundBrush1}">
+
+    <Grid Background="{ThemeResource BackgroundBrush1}">
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="WindowStates">
+                <VisualState x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="MediumState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="CountriesColumnDefinition.Width" Value="*" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1024" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="ApplicationsColumnDefinition.Width" Value="*" />
+                        <Setter Target="ApplicationsColumnDefinition.MaxWidth" Value="400" />
+                        <Setter Target="CountriesColumnDefinition.Width" Value="*" />
+                        <Setter Target="CountriesColumnDefinition.MaxWidth" Value="400" />
+                        <Setter Target="DetailColumnDefinition.Width" Value="*" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="UltraWideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="1544" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="ApplicationsColumnDefinition.Width" Value="*" />
+                        <Setter Target="ApplicationsColumnDefinition.MaxWidth" Value="400" />
+                        <Setter Target="CountriesColumnDefinition.Width" Value="*" />
+                        <Setter Target="CountriesColumnDefinition.MaxWidth" Value="400" />
+                        <Setter Target="DetailColumnDefinition.Width" Value="*" />
+                        <Setter Target="DetailView.MaxReviewItemWidth" Value="336" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+            <VisualStateGroup x:Name="DeviceFamilyStates">
+                <VisualState x:Name="DefaultState" />
+                <VisualState x:Name="Mobile">
+                    <VisualState.StateTriggers>
+                        <windowsStateTriggers:DeviceFamilyStateTrigger DeviceFamily="Mobile" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="SettingsButton.Visibility" Value="Collapsed" />
+                        <Setter Target="SyncButton.Visibility" Value="Collapsed" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="ApplicationsColumnDefinition" Width="*" />
+            <ColumnDefinition x:Name="CountriesColumnDefinition" Width="0" />
+            <ColumnDefinition x:Name="DetailColumnDefinition" Width="0" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <RelativePanel x:Name="Header" 
+                       Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"
+                       Background="{ThemeResource BackgroundBrush2}"
+                       BorderBrush="{ThemeResource BorderBrush}" BorderThickness="0,0,0,1">
+            <Image x:Name="LogoImage"
+                   Height="50" Width="50" Margin="10,0,10,0"
+                   Source="../Picture3.png"/>
+            <TextBlock x:Name="ApplicationName"
+                       x:Uid="MainPage_ApplicationName"
+                       RelativePanel.RightOf="LogoImage"
+                       RelativePanel.AlignVerticalCenterWith="LogoImage"
+                       Style="{StaticResource TitleTextBlockStyle}"
+                       Text="Wooden Moose" />
+            <Button x:Name="SettingsButton"
+                    RelativePanel.AlignTopWithPanel="True"
+                    RelativePanel.AlignRightWithPanel="True"
+                    BorderThickness="0"
+                    Background="Transparent"
+                    Height="50" Width="50">
+                <SymbolIcon>Setting</SymbolIcon>
+            </Button>
+            <Button x:Name="SyncButton"
+                    RelativePanel.AlignTopWithPanel="True"
+                    RelativePanel.LeftOf="SettingsButton"
+                    BorderThickness="0"
+                    Background="Transparent"
+                    Height="50" Width="50">
+                <SymbolIcon>Sync</SymbolIcon>
+            </Button>
+            <TextBlock x:Name="LastSyncDate"
+                       RelativePanel.LeftOf="SyncButton"
+                       RelativePanel.AlignVerticalCenterWith="LogoImage"
+                       Margin="0,0,10,0"
+                       Text="{x:Bind ViewModel.LastUpdatedDate, Converter={StaticResource DateToStringConverter}}" />
+        </RelativePanel>
+        
+        <!-- Applications -->
+        <partialViews:ApplicationsView Grid.Column="0" Grid.Row="1"
+                                       DataContext="{x:Bind ViewModel.ApplicationsViewViewModel}"
+                                       ApplicationSelected="OnApplicationSelected"/>
+
+        <!-- Markets -->
+        <partialViews:MarketsView Grid.Column="1" Grid.Row="1"
+                                  DataContext="{x:Bind ViewModel.MarketsViewViewModel}"
+                                  Visibility="{x:Bind ViewModel.IsApplicationSelected, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                  MarketSelected="OnMarketSelected"/>
+
+        <!-- Detail -->
+        <partialViews:DetailView x:Name="DetailView"
+                                 Grid.Column="2" Grid.Row="1"
+                                 Visibility="{x:Bind ViewModel.IsMarketSelected, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                 DataContext="{x:Bind ViewModel.DetailViewViewModel}" />
+    </Grid>
+</Page>

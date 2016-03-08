@@ -169,7 +169,6 @@ ClientBin/
 *~
 *.dbmdl
 *.dbproj.schemaview
-*.pfx
 *.publishsettings
 node_modules/
 orleans.codegen.cs
@@ -211,3 +210,6 @@ GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
 Sources/WoodenMoose/WoodenMoose/WoodenMoose.nuget.targets
+Sources/WoodenMoose/WoodenMoose/BundleArtifacts
+Sources/WoodenMoose/WoodenMoose/_pkginfo.txt
+Sources/WoodenMoose/Apps/Windows10/WoodenMoose/_language-fr.appx

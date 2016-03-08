@@ -1,0 +1,80 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:controls="using:WoodenMoose.Controls">
+
+    <!-- TextBlock Dark --><!--
+    <Style x:Key="HeaderTextBlockStyleDark" TargetType="TextBlock" BasedOn="{StaticResource HeaderTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource ForegroundBrushDark}" />
+    </Style>
+    <Style x:Key="SubheaderTextBlockStyleDark" TargetType="TextBlock" BasedOn="{StaticResource SubheaderTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource ForegroundBrushDark}" />
+    </Style>
+    <Style x:Key="TitleTextBlockStyleDark" TargetType="TextBlock" BasedOn="{StaticResource TitleTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource ForegroundBrushDark}" />
+    </Style>
+    <Style x:Key="SubtitleTextBlockStyleDark" TargetType="TextBlock" BasedOn="{StaticResource SubtitleTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource ForegroundBrushDark}" />
+    </Style>
+    <Style x:Key="BaseTextBlockStyleDark" TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource ForegroundBrushDark}" />
+    </Style>
+    <Style x:Key="BodyTextBlockStyleDark" TargetType="TextBlock" BasedOn="{StaticResource BodyTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource ForegroundBrushDark}" />
+    </Style>
+
+    --><!-- TextBlock Dim --><!--
+    <Style x:Key="HeaderTextBlockStyleDim" TargetType="TextBlock" BasedOn="{StaticResource HeaderTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource ForegroundBrushDim}" />
+    </Style>
+    <Style x:Key="SubheaderTextBlockStyleDim" TargetType="TextBlock" BasedOn="{StaticResource SubheaderTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource ForegroundBrushDim}" />
+    </Style>
+    <Style x:Key="TitleTextBlockStyleDim" TargetType="TextBlock" BasedOn="{StaticResource TitleTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource ForegroundBrushDim}" />
+    </Style>
+    <Style x:Key="SubtitleTextBlockStyleDim" TargetType="TextBlock" BasedOn="{StaticResource SubtitleTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource ForegroundBrushDim}" />
+    </Style>
+    <Style x:Key="BaseTextBlockStyleDim" TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource ForegroundBrushDim}" />
+    </Style>
+    <Style x:Key="BodyTextBlockStyleDim" TargetType="TextBlock" BasedOn="{StaticResource BodyTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource ForegroundBrushDim}" />
+    </Style>
+
+    --><!-- TextBlock Light --><!--
+    <Style x:Key="HeaderTextBlockStyleLight" TargetType="TextBlock" BasedOn="{StaticResource HeaderTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource ForegroundBrushLight}" />
+    </Style>
+    <Style x:Key="SubheaderTextBlockStyleLight" TargetType="TextBlock" BasedOn="{StaticResource SubheaderTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource ForegroundBrushLight}" />
+    </Style>
+    <Style x:Key="TitleTextBlockStyleLight" TargetType="TextBlock" BasedOn="{StaticResource TitleTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource ForegroundBrushLight}" />
+    </Style>
+    <Style x:Key="SubtitleTextBlockStyleLight" TargetType="TextBlock" BasedOn="{StaticResource SubtitleTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource ForegroundBrushLight}" />
+    </Style>
+    <Style x:Key="BaseTextBlockStyleLight" TargetType="TextBlock" BasedOn="{StaticResource BaseTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource ForegroundBrushLight}" />
+    </Style>
+    <Style x:Key="BodyTextBlockStyleLight" TargetType="TextBlock" BasedOn="{StaticResource BodyTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource ForegroundBrushLight}" />
+    </Style>
+
+    --><!-- TextBlock Hightlight --><!--
+    <Style x:Key="HighlightTextBlockStyleDark" TargetType="TextBlock" BasedOn="{StaticResource BodyTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource HighlightColorDark}" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+    <Style x:Key="HighlightTextBlockStyleDim" TargetType="TextBlock" BasedOn="{StaticResource BodyTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource HighlightColorDim}" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+    <Style x:Key="HighlightTextBlockStyleLight" TargetType="TextBlock" BasedOn="{StaticResource BodyTextBlockStyle}">
+        <Setter Property="Foreground" Value="{ThemeResource HighlightColorLight}" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>-->
+
+</ResourceDictionary>
+

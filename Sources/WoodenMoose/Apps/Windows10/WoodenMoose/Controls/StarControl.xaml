@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="WoodenMoose.Controls.StarControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Name="StarRoot">
+
+    <Viewbox>
+        <Grid x:Name="Root">
+
+            <Path Fill="{Binding ElementName=StarRoot, Path=UnfilledBrush}"
+                  Stroke="{Binding ElementName=StarRoot, Path=OutlineBrush}"
+                  StrokeThickness="{Binding ElementName=StarRoot, Path=OutlineThickness}"
+                  Data="M 5,0 L 4,4 L 0,4 L 3,7 L 2,11 L 5,9 L 6, 9 L 9,11 L 8,7 L 11,4 L 7,4 L 6,0"/>
+
+            <Grid x:Name="StarGrid">
+                <Grid.Clip>
+                    <RectangleGeometry x:Name="ClipGeometry" />
+                </Grid.Clip>
+
+                <Path Fill="{Binding ElementName=StarRoot, Path=FilledBrush}"
+                      Stroke="{Binding ElementName=StarRoot, Path=OutlineBrush}"
+                      StrokeThickness="{Binding ElementName=StarRoot, Path=OutlineThickness}"
+                      Data="M 5,0 L 4,4 L 0,4 L 3,7 L 2,11 L 5,9 L 6, 9 L 9,11 L 8,7 L 11,4 L 7,4 L 6,0"/>
+
+            </Grid>
+
+        </Grid>
+    </Viewbox>
+</UserControl>

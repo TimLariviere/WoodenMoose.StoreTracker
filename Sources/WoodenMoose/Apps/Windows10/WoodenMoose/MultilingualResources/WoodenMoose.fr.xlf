@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="fr" original="WOODENMOOSE/STRINGS/EN/RESOURCES.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1605.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="WOODENMOOSE/STRINGS/EN/RESOURCES.RESW" datatype="resx">
+        <trans-unit id="ApplicationUserControl_Reviews.Text" translate="yes" xml:space="preserve">
+          <source>reviews</source>
+          <target state="final">commentaires</target>
+        </trans-unit>
+        <trans-unit id="ApplicationUserControl_UnreadReviews.Text" translate="yes" xml:space="preserve">
+          <source>new</source>
+          <target state="final">non lus</target>
+        </trans-unit>
+        <trans-unit id="DetailView_Reviews.Header" translate="yes" xml:space="preserve">
+          <source>Reviews</source>
+          <target state="final">Commentaires</target>
+        </trans-unit>
+        <trans-unit id="DetailView_Summary.Header" translate="yes" xml:space="preserve">
+          <source>Summary</source>
+          <target state="final">Résumé</target>
+        </trans-unit>
+        <trans-unit id="MarketUserControl_UnreadReviews.Text" translate="yes" xml:space="preserve">
+          <source>new</source>
+          <target state="final">non lus</target>
+        </trans-unit>
+        <trans-unit id="MarketUserControl_Reviews.Text" translate="yes" xml:space="preserve">
+          <source>reviews</source>
+          <target state="final">commentaires</target>
+        </trans-unit>
+        <trans-unit id="SummaryView_Acquisitions.Text" translate="yes" xml:space="preserve">
+          <source>Acquisitions</source>
+          <target state="final">Téléchargements</target>
+        </trans-unit>
+        <trans-unit id="SummaryView_Distribution.Text" translate="yes" xml:space="preserve">
+          <source>Distribution</source>
+          <target state="final">Répartition</target>
+        </trans-unit>
+        <trans-unit id="SummaryView_Ratings.Text" translate="yes" xml:space="preserve">
+          <source>Ratings</source>
+          <target state="final">Évaluations</target>
+        </trans-unit>
+        <trans-unit id="SummaryView_Reviews.Text" translate="yes" xml:space="preserve">
+          <source>Reviews</source>
+          <target state="final">Commentaires</target>
+        </trans-unit>
+        <trans-unit id="SummaryView_NewAcquisitions.Text" translate="yes" xml:space="preserve">
+          <source>{0:n0} new</source>
+          <target state="final">{0:n0} nouveaux</target>
+        </trans-unit>
+        <trans-unit id="SummaryView_NewRatings.Text" translate="yes" xml:space="preserve">
+          <source>{0:n0} new</source>
+          <target state="final">{0:n0} nouvelles</target>
+        </trans-unit>
+        <trans-unit id="SummaryView_NewReviews.Text" translate="yes" xml:space="preserve">
+          <source>{0:n0} new</source>
+          <target state="final">{0:n0} nouveaux</target>
+        </trans-unit>
+        <trans-unit id="SummaryView_AverageRating.Text" translate="yes" xml:space="preserve">
+          <source>Average rating</source>
+          <target state="final">Note moyenne</target>
+        </trans-unit>
+        <trans-unit id="SummaryView_AverageRatingValue.Text" translate="yes" xml:space="preserve">
+          <source>{0:n1} / 5</source>
+          <target state="final">{0:n1} / 5</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="en" target-language="fr" original="WOODENMOOSE/STRINGS/EN/COUNTRIESRESOURCES.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1605.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="WOODENMOOSE/STRINGS/EN/COUNTRIESRESOURCES.RESW" datatype="resx">
+        <trans-unit id="be" translate="yes" xml:space="preserve">
+          <source>Belgium</source>
+          <target state="final">Belgique</target>
+        </trans-unit>
+        <trans-unit id="ca" translate="yes" xml:space="preserve">
+          <source>Canada</source>
+          <target state="final">Canada</target>
+        </trans-unit>
+        <trans-unit id="cn" translate="yes" xml:space="preserve">
+          <source>China</source>
+          <target state="final">Chine</target>
+        </trans-unit>
+        <trans-unit id="de" translate="yes" xml:space="preserve">
+          <source>Germany</source>
+          <target state="final">Allemagne</target>
+        </trans-unit>
+        <trans-unit id="fr" translate="yes" xml:space="preserve">
+          <source>France</source>
+          <target state="final">France</target>
+        </trans-unit>
+        <trans-unit id="gb" translate="yes" xml:space="preserve">
+          <source>United Kingdom</source>
+          <target state="final">Royaume-Uni</target>
+        </trans-unit>
+        <trans-unit id="it" translate="yes" xml:space="preserve">
+          <source>Italia</source>
+          <target state="final">Italie</target>
+        </trans-unit>
+        <trans-unit id="jp" translate="yes" xml:space="preserve">
+          <source>Japan</source>
+          <target state="final">Japon</target>
+        </trans-unit>
+        <trans-unit id="ma" translate="yes" xml:space="preserve">
+          <source>Morocco</source>
+          <target state="final">Maroc</target>
+        </trans-unit>
+        <trans-unit id="us" translate="yes" xml:space="preserve">
+          <source>United States</source>
+          <target state="final">États-Unis</target>
+        </trans-unit>
+        <trans-unit id="ww" translate="yes" xml:space="preserve">
+          <source>Worldwide</source>
+          <target state="final">Mondial</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+  <file datatype="xml" source-language="en" target-language="fr" original="WOODENMOOSE/STRINGS/EN/MESSAGESRESOURCES.RESW" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.1605.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="WOODENMOOSE/STRINGS/EN/MESSAGESRESOURCES.RESW" datatype="resx">
+        <trans-unit id="DateAndReviewerConverter_Text" translate="yes" xml:space="preserve">
+          <source>{0:d} by {1}</source>
+          <target state="final">{0:d} par {1}</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
