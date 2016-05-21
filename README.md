@@ -1,2 +1,3 @@
-# WindowsStoreServices
-LINQ-like implementation of the Analytics API of the Windows Store. Portable Class Library, compatible Xamarin
+# WoodenMoose
+
+UWA for Windows 10. Track applications ratings and reviews on the Windows Store
