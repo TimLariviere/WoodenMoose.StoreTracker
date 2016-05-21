@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{215381F9-22C7-4993-9E4F-D23472C8796E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WoodenMoose.UWP", "Apps\WoodenMoose.Windows\WoodenMoose.UWP.csproj", "{7136CE40-2531-4F6F-91FF-C2CC894EF257}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WoodenMoose.UWP", "Apps\WoodenMoose.UWP\WoodenMoose.UWP.csproj", "{7136CE40-2531-4F6F-91FF-C2CC894EF257}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WoodenMoose.Core", "WoodenMoose.Core\WoodenMoose.Core.csproj", "{63BD72DB-2FA3-4E4C-9965-C84F3759605C}"
 EndProject
