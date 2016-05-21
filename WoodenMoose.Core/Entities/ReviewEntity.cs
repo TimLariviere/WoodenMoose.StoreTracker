@@ -7,14 +7,8 @@ namespace WoodenMoose.Core.Entities
     /// <summary>
     /// Represents a review
     /// </summary>
-    public class ReviewEntity
+    public class ReviewEntity : BaseEntity
     {
-        /// <summary>
-        /// Gets or sets the identifier of the review
-        /// </summary>
-        [PrimaryKey]
-        public int Id { get; set; }
-
         /// <summary>
         /// Gets or sets the application
         /// </summary>

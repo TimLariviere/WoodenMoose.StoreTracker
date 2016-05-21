@@ -1,15 +1,12 @@
-﻿namespace WoodenMoose.Core.Entities
+﻿using SQLite.Net.Attributes;
+
+namespace WoodenMoose.Core.Entities
 {
     /// <summary>
     /// Represents an application
     /// </summary>
-    public class ApplicationEntity
+    public class ApplicationEntity : BaseEntity
     {
-        /// <summary>
-        /// Gets or sets the identifier
-        /// </summary>
-        public int Id { get; set; }
-
         /// <summary>
         /// Gets or sets the name
         /// </summary>
@@ -24,5 +21,20 @@
         /// Gets or sets the URL of the logo
         /// </summary>
         public string LogoUrl { get; set; }
+
+        /// <summary>
+        /// Gets or sets the application identifier on the Apple Store
+        /// </summary>
+        public string AppleStoreId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the application identifier on the Google Play Store
+        /// </summary>
+        public string GooglePlayStoreId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the application identifier on the Windows Store
+        /// </summary>
+        public string WindowsStoreId { get; set; }
     }
 }
