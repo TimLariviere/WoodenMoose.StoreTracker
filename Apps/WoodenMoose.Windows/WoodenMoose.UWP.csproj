@@ -127,10 +127,6 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SQLite.Net.Platform.WinRT\SQLite.Net.Platform.WinRT.csproj">
-      <Project>{813E3153-3C6B-4A77-9EE1-ECEBC6E2A358}</Project>
-      <Name>SQLite.Net.Platform.WinRT</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\WoodenMoose.Core\WoodenMoose.Core.csproj">
       <Project>{63bd72db-2fa3-4e4c-9965-c84f3759605c}</Project>
       <Name>WoodenMoose.Core</Name>
@@ -146,6 +142,9 @@
     <Folder Include="Common\" />
   </ItemGroup>
   <ItemGroup>
+    <SDKReference Include="Microsoft.VCLibs, Version=14.0">
+      <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
+    </SDKReference>
     <SDKReference Include="SQLite.UWP.2015, Version=3.13.0">
       <Name>SQLite for Universal Windows Platform</Name>
     </SDKReference>

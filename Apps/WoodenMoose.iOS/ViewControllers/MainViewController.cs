@@ -2,11 +2,11 @@
 
 using UIKit;
 
-namespace WoodenMoose.iOS
+namespace WoodenMoose.iOS.ViewControllers
 {
-    public partial class ViewController : UIViewController
+    public partial class MainViewController : UIViewController
     {
-        public ViewController(IntPtr handle) : base(handle)
+        public MainViewController(IntPtr handle) : base(handle)
         {
         }
 
