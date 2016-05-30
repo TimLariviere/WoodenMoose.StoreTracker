@@ -4,11 +4,11 @@ using Android.OS;
 using Android.Widget;
 using SQLite.Net.Platform.XamarinAndroid;
 using System;
-using WoodenMoose.Android.Plaftorm;
 using WoodenMoose.Core.Repositories;
 using WoodenMoose.Core.Services;
+using WoodenMoose.Droid.Platform;
 
-namespace WoodenMoose.Android
+namespace WoodenMoose.Droid.Activities
 {
     [Activity(Label = "MyApp", Theme = "@android:style/Theme.Holo",
               ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]

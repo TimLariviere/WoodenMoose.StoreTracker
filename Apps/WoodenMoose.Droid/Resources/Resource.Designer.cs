@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("WoodenMoose.Android.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("WoodenMoose.Droid.Resource", IsApplication=true)]
 
-namespace WoodenMoose.Android
+namespace WoodenMoose.Droid
 {
 	
 	
@@ -26,8 +26,8 @@ namespace WoodenMoose.Android
 		
 		public static void UpdateIdValues()
 		{
-			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::WoodenMoose.Android.Resource.String.ApplicationName;
-			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::WoodenMoose.Android.Resource.String.Hello;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::WoodenMoose.Droid.Resource.String.ApplicationName;
+			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::WoodenMoose.Droid.Resource.String.Hello;
 		}
 		
 		public partial class Attribute

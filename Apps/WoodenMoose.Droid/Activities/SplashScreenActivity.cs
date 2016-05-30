@@ -3,7 +3,7 @@ using Android.Content;
 using Android.Content.PM;
 using Android.OS;
 
-namespace WoodenMoose.Android.Activities
+namespace WoodenMoose.Droid.Activities
 {
     [Activity(Label = "Wooden Moose", MainLauncher = true, NoHistory = true, Theme = "@style/Theme.Splash",
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]

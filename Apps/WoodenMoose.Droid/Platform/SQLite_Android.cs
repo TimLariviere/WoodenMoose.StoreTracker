@@ -1,7 +1,7 @@
 ﻿using System;
 using WoodenMoose.Core.Platform;
 
-namespace WoodenMoose.Android.Plaftorm
+namespace WoodenMoose.Droid.Platform
 {
     public class SQLite_Android : ISQLite
     {
