@@ -22,7 +22,7 @@ namespace WoodenMoose.UWP
         {
             await DependencyService.InitializeAsync();
             await DependencyService.RegisterCoreAsync();
-            await DependencyService.RegisterPlatformSpecificAsync<SQLitePlatformWinRT, SQLite_Windows>();
+            await DependencyService.RegisterPlatformSpecificAsync<SQLitePlatformWinRT, SQLiteParameters>();
         }
 
         public override Task OnStartAsync(StartKind startKind, IActivatedEventArgs args)

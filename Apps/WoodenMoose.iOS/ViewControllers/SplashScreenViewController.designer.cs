@@ -9,8 +9,8 @@ using Foundation;
 
 namespace WoodenMoose.iOS.ViewControllers
 {
-	[Register ("MainViewController")]
-	partial class MainViewController
+	[Register ("SplashScreenViewController")]
+	partial class SplashScreenViewController
 	{
 		void ReleaseDesignerOutlets ()
 		{

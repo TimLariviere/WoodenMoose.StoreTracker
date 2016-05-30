@@ -1,5 +1,4 @@
-﻿using SQLite.Net.Attributes;
-using System;
+﻿using System;
 using WoodenMoose.Core.Enums;
 
 namespace WoodenMoose.Core.Entities

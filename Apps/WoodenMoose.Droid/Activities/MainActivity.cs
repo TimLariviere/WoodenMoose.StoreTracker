@@ -2,11 +2,9 @@
 using Android.Content.PM;
 using Android.OS;
 using Android.Widget;
-using SQLite.Net.Platform.XamarinAndroid;
 using System;
 using WoodenMoose.Core.Repositories;
 using WoodenMoose.Core.Services;
-using WoodenMoose.Droid.Platform;
 
 namespace WoodenMoose.Droid.Activities
 {
@@ -25,10 +23,6 @@ namespace WoodenMoose.Droid.Activities
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
-            DependencyService.InitializeAsync().GetAwaiter().GetResult();
-            DependencyService.RegisterCoreAsync().GetAwaiter().GetResult();
-            DependencyService.RegisterPlatformSpecificAsync<SQLitePlatformAndroid, SQLite_Android>().GetAwaiter().GetResult();
 
             _applicationRepository = DependencyService.Resolve<IApplicationRepository>();
 

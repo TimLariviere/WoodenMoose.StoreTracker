@@ -16,7 +16,7 @@ namespace WoodenMoose.Core.Services
         /// <summary>
         /// Unity container
         /// </summary>
-        private static IUnityContainer UnityContainer;
+        private static IUnityContainer _unityContainer;
         
         /// <summary>
         /// Initialize the dependency service
@@ -24,7 +24,7 @@ namespace WoodenMoose.Core.Services
         /// <returns></returns>
         public static Task InitializeAsync()
         {
-            UnityContainer = new UnityContainer();
+            _unityContainer = new UnityContainer();
             return TaskUtilities.CompletedTask;
         }
 
@@ -32,14 +32,14 @@ namespace WoodenMoose.Core.Services
         /// Register all platform specific implementations available within the Core namespace
         /// </summary>
         /// <typeparam name="TSQLitePlatform">Implementation of platform-specific SQLitePlatform</typeparam>
-        /// <typeparam name="TSQLite">Implementation of platform-specific SQLite</typeparam>
+        /// <typeparam name="TSQLiteParameters">Implementation of platform-specific SQLite</typeparam>
         /// <returns></returns>
-        public static Task RegisterPlatformSpecificAsync<TSQLitePlatform, TSQLite>()
+        public static Task RegisterPlatformSpecificAsync<TSQLitePlatform, TSQLiteParameters>()
             where TSQLitePlatform : ISQLitePlatform
-            where TSQLite : ISQLite, new()
+            where TSQLiteParameters : ISQLiteParameters, new()
         {
-            UnityContainer.RegisterType<ISQLitePlatform, TSQLitePlatform>();
-            UnityContainer.RegisterType<ISQLite, TSQLite>();
+            _unityContainer.RegisterType<ISQLitePlatform, TSQLitePlatform>();
+            _unityContainer.RegisterType<ISQLiteParameters, TSQLiteParameters>();
             return TaskUtilities.CompletedTask;
         }
 
@@ -49,8 +49,8 @@ namespace WoodenMoose.Core.Services
         /// <returns></returns>
         public static Task RegisterCoreAsync()
         {
-            UnityContainer.RegisterType<IApplicationRepository, ApplicationRepository>();
-            UnityContainer.RegisterType<IReviewRepository, ReviewRepository>();
+            _unityContainer.RegisterType<IApplicationRepository, ApplicationRepository>();
+            _unityContainer.RegisterType<IReviewRepository, ReviewRepository>();
             return TaskUtilities.CompletedTask;
         }
 
@@ -63,7 +63,7 @@ namespace WoodenMoose.Core.Services
         public static Task RegisterTypeAsync<TFrom, TTo>()
             where TTo : TFrom, new()
         {
-            UnityContainer.RegisterType<TFrom, TTo>();
+            _unityContainer.RegisterType<TFrom, TTo>();
             return TaskUtilities.CompletedTask;
         }
 
@@ -74,7 +74,7 @@ namespace WoodenMoose.Core.Services
         /// <returns>The retrieved object</returns>
         public static T Resolve<T>()
         {
-            return UnityContainer.Resolve<T>();
+            return _unityContainer.Resolve<T>();
         }
 
         /// <summary>

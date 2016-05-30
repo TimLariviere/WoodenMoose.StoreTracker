@@ -38,7 +38,7 @@
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="Entities\ReviewEntity.cs" />
     <Compile Include="Enums\StoreType.cs" />
-    <Compile Include="Platform\ISQLite.cs" />
+    <Compile Include="Platform\ISQLiteParameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\IApplicationRepository.cs" />
     <Compile Include="Repositories\IBaseRepository.cs" />
