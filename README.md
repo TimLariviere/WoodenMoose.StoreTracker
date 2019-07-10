@@ -1,7 +1,7 @@
 # WoodenMoose
 Concept app for tracking applications ratings and reviews throughout Apple, Google and Microsoft Store.
 
-Abandonned due to no reasonably permissive API to request Stores.
+Abandoned due to no reasonably permissive API to request Stores.
 
 UWP Desktop
 
